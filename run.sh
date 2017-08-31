@@ -1,4 +1,5 @@
 #!/bin/sh
 
-touch run.log
-ruby get_stations.rb >> run.log
+path=$(dirname "$0")
+touch $path/run.log
+ruby $path/get_stations.rb >> $path/run.log
