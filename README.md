@@ -24,6 +24,8 @@ ruby get_stations.rb
 
 ## Set up cron
 
+Use the `run.sh` script to log output to `run.log`.
+
 ```
-*/5 * * * * ruby get_stations.rb
+*/5 * * * * /home/gordon/dev/bikestalker/run.sh
 ```
