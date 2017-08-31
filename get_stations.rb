@@ -71,12 +71,16 @@ def log_station_states
   stations.each { |s| insert_station_state(s) }
 end
 
+def log(message)
+  puts "[#{DateTime.now.to_s}] #{message}"
+end
+
 def main
-  puts "fetching station list"
+  log "fetching station list"
   insert_stations
-  puts "fetching statuses"
+  log "fetching statuses"
   log_station_states
-  puts "done!"
+  log "done!"
 end
 
 main
